@@ -201,7 +201,7 @@
   cursor: pointer;
   fill: #d41443;
 }
-// ------------------------ Мщбильное меню  --------------------------
+// ------------------------ Мобильное меню  --------------------------
 .mobile {
   display: flex;
   align-items: center;
@@ -221,7 +221,6 @@
 
   transition: transform var(--duration) var(--timing-function);
   @media screen and (min-width: 1200px) {
-
     display: none;
   }
 }
@@ -243,6 +242,11 @@
   font-family: inherit;
   cursor: pointer;
   fill: #ffffff;
+  transition: fill var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: #ecebeb;
+  }
 }
 .header__mobilemenu-button {
   width: 209px;
@@ -264,19 +268,14 @@
   justify-content: center;
   cursor: pointer;
   color: #d41443;
+  transition: background-color var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
   @media screen and (min-width: 768px) {
     width: 186px;
   }
-}
-.header__mobilemenu-link-home {
-  font-family: DM Sans;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.29;
-  margin-left: 21px;
-  display: flex;
-  align-items: center;
-  color: #d41443;
 }
 .header__mobilemenu-link {
   font-family: DM Sans;
@@ -287,6 +286,11 @@
   display: flex;
   align-items: center;
   color: #ffffff;
+  transition: color var(--duration) var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .header__mobilemenu-item {
   display: flex;
@@ -295,37 +299,7 @@
   height: 42px;
   border: 1px solid #e18298;
 }
-// .header__mobilemenu-item::before {
-//   content: '';
-//   border: 1px solid #e18298;
-//   max-width: 100%;
-// }
 
-// Скрыть мобильное меню
-// .header__backdrop {
-//   position: fixed;
-//   height: 100vh;
-//   width: 100vw;
-//   top: 0;
-//   overflow-y: scroll;
-//   z-index: 999;
-//   background-color: rgba(23, 26, 36, 0.2);
-//   transition: opacity var(--time) var(--timing-function),
-//     visibility var(--time) var(--timing-function);
-// }
-// .header__backdrop {
-//   &.is-hidden {
-//     opacity: 0;
-//     visibility: hidden;
-//     pointer-events: none;
-//   }
-// }
-
-// .is-hidden {
-//   opacity: 0;
-//   visibility: hidden;
-//   pointer-events: none;
-// }
 // ---------------------------Hero---------------------------
 
 .header-hero {
